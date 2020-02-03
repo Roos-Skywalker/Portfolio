@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beroepsbeeld</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
+@extends('layout')
+@section('beroepsbeeld')
 <body>
   <script type="text/javascript" src="/js/javascript.js"></script>
   <ul id="navbar">
@@ -231,3 +223,5 @@
         Desalniettemin, YourSurprise werd 15 jaar geleden opgericht. Ze maken gepersonaliseerde cadeaus en producten voor klanten in Europa.
       </details>
   </span>
+  </main>
+  @endsection

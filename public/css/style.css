@@ -42,22 +42,22 @@
 /*Global*/
     @font-face {
       font-family: 'cyberspaceregular';
-      src: url('/cyberfont/cyberspace.woff2') format('woff2'),
-           url('/cyberfont/cyberspace.woff') format('woff');
+      src: url('../fonts/cyberfont/cyberspace.woff2') format('woff2'),
+           url('../fonts/cyberfont/cyberspace.woff') format('woff');
       font-weight: normal;
       font-style: normal;
     }
     @font-face {
       font-family: 'chintzy_cpu_brkregular';
-      src: url('/cpufont/chintzy.woff2') format('woff2'),
-           url('/cpufont/chintzy.woff') format('woff');
+      src: url('../fonts/cpufont/chintzy.woff2') format('woff2'),
+           url('../fonts/cpufont/chintzy.woff') format('woff');
       font-weight: normal;
       font-style: normal;
     }
     @font-face {
       font-family: 'unispacebold';
-      src: url('/unispacefont/unispace_bd.woff2') format('woff2'),
-           url('/unispacefont/unispace_bd.woff') format('woff');
+      src: url('../fonts/unispacefont/unispace_bd.woff2') format('woff2'),
+           url('../fonts/unispacefont/unispace_bd.woff') format('woff');
       font-weight: normal;
       font-style: normal;
     }

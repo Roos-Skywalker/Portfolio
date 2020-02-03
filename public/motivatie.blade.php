@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Motivatie</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
+@extends('layout')
+@section('motivatie')
 <body>
   <script type="text/javascript" src="/js/javascript.js"></script>
   <ul id="navbar">
@@ -24,7 +16,7 @@
     <h2>Theorie</h2>
       <h3>Definitie</h3>
         <p>De definitie van motivatie is het willen uitvoeren van één of meerdere acties. Er zijn twee verschillende vormen van motivatie: Intrinsieke motivatie en extrinsieke motivatie.
-          
+
           Intrinsieke motivatie ontstaat door nieuwsgierigheid naar een bepaald onderwerp, en deze nieuwsgierigheid zet zich om in oprechte interesse, waardoor het uitvoeren van de activiteit op zichzelf een beloning wordt.
 
           Extrinsieke motivatie ontstaat door ofwel nieuwsgierigheid die later afzwakt, ofwel gehoor geven aan een gebod. Deze vorm van motivatie wordt in stand gehouden door het vooruitzicht op een beloning of het willen vermijden van straf of andere negatieve gevolgen.<sup><a href="#bron0">0</a></sup></p>
@@ -37,21 +29,21 @@
       <br>
       <h3>TED Talk<sup><a href="#bron4">4</a></sup></h3>
         <p>Dan Pink heeft het over de principes achter intrinsieke motivatie en hoe de verkeerde manier van motiveren word toegepast in het bedrijfsleven.</p>
-      
+
         <p>Deze principes zijn: Autonomie, Bekwaamheid en Doelgerichtheid.</p>
-      
+
         <p>Volgens Dan Pink betekent ‘’Autonomy’’ (vert. Autonomie), het gevoel hebben van vrijheid en zelfverantwoordelijkheid.  Zelf kunnen bepalen waar, wanneer en wat je doet zijn belangrijke onderdelen van motivatie.</p>
-      
+
         <p>Volgens Dan Pink betekent ‘’Mastery’’ (vert. Bekwaamheid), het gevoel hebben dat je competent bent in je vak, of dat je op zijn minst de vaardigheden bezit om het vak goed te leren. Ergens goed in zijn of kunnen zijn is belangrijk om voor je intrinsieke motivatie.</p>
-      
+
         <p>Volgens Dan Pink betekent ‘’Purpose’’ (vert. Doelgerichtheid), de wens om een doel of persoon groter dan het leven te willen dienen. Het idee dat jouw acties zinvol zijn, en iets of iemand beter maken is een belangrijk kenmerk van intrinsieke motivatie.</p>
-      
+
         <p>Helaas, werkt het bedrijfsleven nog met de princiepen van extrinsieke motivatie, zoals bonussen voor de beste, de snelste, de sterkste, etc. Dit werkt vernauwend voor de creativiteit, daar alle energie gestoken moet worden in zo snel mogelijk presteren in plaats van met creativiteit nieuwe oplossingen verzinnen.</p>
-      
+
         <p>Dan Pink stelt dus dat de beste manier om prestaties te verbeteren en iemand te motiveren; is iemand autonomie, een hoger doel en vaardigheid te geven in een vak waar hij goed in is.</p>
-      
+
         <p>Volgens Dan Pink is er naast intrinsieke motivatie, ook extrinsieke motivatie zoals die wordt toegepast in het bedrijfsleven. Extrinsieke motivatie is een vorm van motivatie waarin het niet de activiteit is die je wilt uitvoeren, maar de beloning van die activiteit wilt krijgen. Of het ontlopen van een straf.</p>
-      
+
         <p><sup><a href="#bron0">0</a></sup>Dit werkt echter alleen als de persoon al intrinsiek gemotiveerd is in de eerste plaats. Je kan niet intrinsieke motivatie kweken, maar, je kan wel nieuwe dingen doen om te ontdekken of je intrinsiek gemotiveerd bent in die activiteiten. Je wordt met intrinsieke motivatie geboren.</p>
       <br>
       <h3>Argumenten</h3>
@@ -139,4 +131,4 @@
     </span>
   </main>
 </body>
-</html>
+@endsection

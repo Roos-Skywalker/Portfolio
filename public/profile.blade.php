@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Profiel pagina</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
+@extends('layout')
+@section('profile')
 <body id="profile">
   <script type="text/javascript" src="/js/javascript.js"></script>
   <ul id="navbar">
@@ -58,4 +50,4 @@
       <a href="http://steamcommunity.com/id/Roos-Skywalker/"><img src="https://steamsignature.com/card/0/76561198045053844.png" alt="" title="" /></a>
   </main>
 </body>
-</html>
+@endsection
