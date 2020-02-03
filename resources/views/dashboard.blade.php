@@ -1,15 +1,6 @@
 @extends('layout')
-@section('dashboard')
-<body>
+@section('content')
   <script type="text/javascript" src="/js/javascript.js"></script>
-  <ul id="navbar">
-    <li class="nav"><a href="/index.html">Home</a></li>
-    <li class="nav"><a href="/profile.html">Profiel pagina</a></li>
-    <li class="nav" class="active"><a href="/dashboard.html">Dashboard</a></li>
-    <li class="nav" ><a href="/motivatie.html">Motivatie</a></li>
-    <li class="nav"><a href="/beroepsbeeld.html">Beroepsbeeld</a></li>
-    <li class="nav"><a href="/construction.html">Curriculum Vitea</a></li>
-  </ul>
     <main>
     <h1>Mijn Dashboard</h1>
     <span>
@@ -223,5 +214,4 @@
             </ul>
         </span>
     </main>
-</body>
 @endsection

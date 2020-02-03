@@ -10,14 +10,13 @@
 </head>
 <body>
     <ul id="navbar">
-        <li class="nav" class="{{ Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/index.php">Home</a></li>
-        <li class="nav"><a href="/profile.php">Profiel pagina</a></li>
-        <li class="nav"><a href="/dashboard.php">Dashboard</a></li>
-        <li class="nav"><a href="/motivatie.php">Motivatie</a></li>
-        <li class="nav"><a href="/beroepsbeeld.php">Beroepsbeeld</a></li>
-        <li class="nav"><a href="/construction.php">Curriculum Vitea</a></li>
+        <li class="nav" class="{{ Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/">Home</a></li>
+        <li class="nav"><a href="/profile">Profiel pagina</a></li>
+        <li class="nav"><a href="/dashboard">Dashboard</a></li>
+        <li class="nav"><a href="/motivatie">Motivatie</a></li>
+        <li class="nav"><a href="/beroepsbeeld">Beroepsbeeld</a></li>
+        <li class="nav"><a href="/construction">Curriculum Vitea</a></li>
     </ul>
-@yield('homepage')
-    @yield('beroepsbeeld')
+@yield('content')
 </body>
 </html>
