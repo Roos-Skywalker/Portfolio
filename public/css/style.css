@@ -3,7 +3,7 @@
         color: black;
         font-family: 'unispacebold', 'Unispace', 'Share Tech Mono';
         margin:0;
-        background-image: url("/img/background.gif")
+        background-image: url("../img/background.gif")
     }
     table {
         border: 1px solid black;
@@ -27,7 +27,7 @@
       margin: 10px 0px 10px 0px;
       border-style: hidden;
       border-width: 100px;
-      border-radius: 2%
+      border-radius: 2%;
     }
     div {
         padding:20px;margin-top:30px;
@@ -181,18 +181,8 @@
     }
 /*Easter eggs*/
     #loek:hover {
-      background-image: url("/img/Loek1.png")
+      background-image: url("../img/Loek1.png")
     }
-/*Laravel*/
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
-}
-
 .full-height {
     height: 100vh;
 }
