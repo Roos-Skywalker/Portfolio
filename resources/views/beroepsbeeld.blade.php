@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-  <script type="text/javascript" src="/js/javascript.js"></script>
   <main>
     <h1>Beroepsbeeld</h1>
   <span>
@@ -215,4 +214,4 @@
       </details>
   </span>
   </main>
-  @endsection
+@endsection

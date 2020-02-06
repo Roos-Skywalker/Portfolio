@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script type="text/javascript" src="/js/javascript.js"></script>
     <ul id="navbar">
         <li class="nav" class="{{ Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/">Home</a></li>
         <li class="nav"><a href="/profile">Profiel pagina</a></li>

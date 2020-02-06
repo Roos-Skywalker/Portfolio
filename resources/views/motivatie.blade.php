@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-  <script type="text/javascript" src="/js/javascript.js"></script>
   <main>
     <h1>Motivatie</h1>
   <span>

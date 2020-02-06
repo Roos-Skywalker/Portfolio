@@ -1,7 +1,6 @@
 @extends('layout')
 @section('content')
 <body id="profile">
-  <script type="text/javascript" src="/js/javascript.js"></script>
   <main>
     <h1>Over mij</h1>
     <span>
