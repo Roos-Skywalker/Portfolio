@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAssignmentsTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateAssignmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('assignments', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedTinyInteger('blok');
-            $table->string('cursus');
-            $table->string('toets');
-            $table->unsignedTinyInteger('weging');
-            $table->unsignedDecimal('ec');
-            $table->unsignedDecimal('cijfer');
+            $table->string('slug');
+            $table->string('title');
+            $table->string('body');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateAssignmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assignments');
+        Schema::dropIfExists('posts');
     }
 }

@@ -21,7 +21,7 @@
             <td>Eindgesprek</td>
             <td>100%</td>
             <td>2,5</td>
-            <td style="background-color: rgb(8, 185, 8)">Voorbeeld voldoende 5,5</td>
+            <td style="background-color: rgb(8, 185, 8)">Voorbeeld voldoende 8,5</td>
         </tr>
         <tr>
             <td style="border-top-style: hidden; border-bottom-style: hidden"></td>
@@ -29,7 +29,7 @@
             <td>Theorietentamen</td>
             <td>100%</td>
             <td>7,5</td>
-            <td style="background-color:rgb(184, 0, 0)">Voorbeeld onvoldoende 5,49</td>
+            <td style="background-color:rgb(184, 0, 0)">Voorbeeld onvoldoende 6,8</td>
         </tr>
         <tr>
             <td style="border-top-style: hidden"></td>
@@ -37,7 +37,7 @@
             <td>Casustoets</td>
             <td>100%</td>
             <td>5</td>
-            <td>#</td>
+            <td>7</td>
         </tr>
         <tr>
             <td style="border-bottom-style: hidden">Blok 2</td>
@@ -57,11 +57,11 @@
         </tr>
         <tr>
             <td style="border-top-style: hidden; border-bottom-style: hidden"></td>
-            <td>Functioneringsgesprek</td>
+            <td>Hogeschooltaal toets</td>
             <td></td>
             <td>33%</td>
             <td></td>
-            <td>#</td>
+            <td>8,6</td>
         </tr>
         <tr>
             <td style="border-top-style: hidden; border-bottom-style: hidden"></td>
@@ -200,6 +200,22 @@
             <td>#</td>
         </tr>
     </table>
+        {{$verzameling = \DB::table('assignments')->GET()}}
+{{--        {{$dashboard->prepare('select * from assignments')}}--}}
+
+    <table>
+        @foreach ($verzameling as $object)
+            <tr>
+                <td>{{$object->id}}</td>
+                <td>{{$object->cursus}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @endforeach
+    </table>
+        <button type="submit">test</button>
 </span>
     <span>
         <h2>Studiewijzer</h2>
