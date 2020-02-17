@@ -9,11 +9,10 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function show($id){
-        //$post = Post::where('id', $id)->firstOrFail();
         $post = Post::findOrFail($id);
 
         return view('posts.show', [
-           'post' => $post //= Post::where('slug', $slug)->firstOrFail()
+           'post' => $post
         ]);
     }
 

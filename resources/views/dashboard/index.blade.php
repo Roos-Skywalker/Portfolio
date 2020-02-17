@@ -2,10 +2,38 @@
 @section('content')
     <main>
     <h1>Mijn Dashboard</h1>
+        <span>
+        <h2>Studiemonitor met DB</h2>
+            <label for="NBSA">NBSA grens = 27/45</label>
+            <progress id="NBSA" value="27" max="45"></progress>
+            <table>
+                <tr>
+                    <th>Blok</th>
+                    <th>Cursus</th>
+                    <th>Toets</th>
+                    <th>Weging</th>
+                    <th>EC</th>
+                    <th>Cijfer</th>
+                </tr>
+                @foreach ($assignments as $assignment)
+                    <tr>
+                        <td>{{$assignment->blok}}</td>
+                        <td>{{$assignment->cursus}}</td>
+                        <td>{{$assignment->toets}}</td>
+                        <td>{{$assignment->weging}}%</td>
+                        <td>{{$assignment->ec}}</td>
+                        <td>{{$assignment->cijfer}}</td>
+                    </tr>
+                @endforeach
+            </table>
+                <button type="submit">Add</button>
+                <button type="submit">Edit</button>
+                <button type="submit">Delete</button>
+    </span>
     <span>
-    <h2>Studiemonitor</h2>
-<label for="NBSA">NBSA grens = 0/45</label>
-    <progress id="NBSA" value="0" max="45"></progress>
+    <h2>Studiemonitor in HTML</h2>
+<label for="NBSA">NBSA grens = 27/45</label>
+    <progress id="NBSA" value="27" max="45"></progress>
     <table>
         <tr>
             <th></th>
@@ -42,24 +70,16 @@
         <tr>
             <td style="border-bottom-style: hidden">Blok 2</td>
             <td>Professionals skills 1</td>
-            <td>Presentatie</td>
-            <td>33%</td>
-            <td>2,5</td>
-            <td>#</td>
-        </tr>
-        <tr>
-            <td style="border-top-style: hidden; border-bottom-style: hidden"></td>
             <td>Verslag</td>
-            <td></td>
-            <td>33%</td>
-            <td></td>
-            <td>#</td>
+            <td>100%</td>
+            <td>2,5</td>
+            <td>6,7</td>
         </tr>
         <tr>
             <td style="border-top-style: hidden; border-bottom-style: hidden"></td>
             <td>Hogeschooltaal toets</td>
             <td></td>
-            <td>33%</td>
+            <td>0%</td>
             <td></td>
             <td>8,6</td>
         </tr>
@@ -82,9 +102,9 @@
         <tr>
             <td style="border-top-style: hidden"></td>
             <td>Groepsproject</td>
+            <td></td>
             <td>50%</td>
             <td>5</td>
-            <td></td>
             <td>#</td>
         </tr>
         <tr>
@@ -200,23 +220,7 @@
             <td>#</td>
         </tr>
     </table>
-        {{$verzameling = \DB::table('assignments')->GET()}}
-{{--        {{$dashboard->prepare('select * from assignments')}}--}}
-
-    <table>
-        @foreach ($verzameling as $object)
-            <tr>
-                <td>{{$object->id}}</td>
-                <td>{{$object->cursus}}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            @endforeach
-    </table>
-        <button type="submit">test</button>
-</span>
+    </span>
     <span>
         <h2>Studiewijzer</h2>
             <ul id="studiewijzer">

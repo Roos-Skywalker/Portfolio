@@ -10,14 +10,14 @@
 </head>
 <body>
     <script type="text/javascript" src="/js/javascript.js"></script>
-    <ul id="navbar">
-        <li class="nav" class="{{ Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/">Home</a></li>
-        <li class="nav"><a href="/profile">Profiel pagina</a></li>
-        <li class="nav"><a href="/dashboard">Dashboard</a></li>
-        <li class="nav"><a href="/motivatie">Motivatie</a></li>
-        <li class="nav"><a href="/beroepsbeeld">Beroepsbeeld</a></li>
-        <li class="nav"><a href="/construction">Curriculum Vitea</a></li>
-        <li class="nav"><a href="/construction">Blog</a></li>
+    <ul class="navbar">
+        <li class="nav {{Request::path() === '/' ? 'active' : ''}}"><a href="/">Home</a></li>
+        <li class="nav {{Request::path() === 'profile' ? 'active' : ''}}"><a href="/profile">Profiel pagina</a></li>
+        <li class="nav {{Request::path() === 'dashboard' ? 'active' : ''}}"><a href="/dashboard">Dashboard</a></li>
+        <li class="nav {{Request::path() === 'motivatie' ? 'active' : ''}}"><a href="/motivatie">Motivatie</a></li>
+        <li class="nav {{Request::path() === 'beroepsbeeld' ? 'active' : ''}}"><a href="/beroepsbeeld">Beroepsbeeld</a></li>
+        <li class="nav {{Request::path() === 'construction' ? 'active' : ''}}"><a href="/construction">Curriculum Vitea</a></li>
+        <li class="nav {{Request::path() === 'blog' ? 'active' : ''}}"><a href="/blog">Blog</a></li>
     </ul>
 @yield('content')
 </body>

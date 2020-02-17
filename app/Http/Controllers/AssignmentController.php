@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+use App\Assignment;
 use Illuminate\Http\Request;
 
 class AssignmentController extends Controller
@@ -13,9 +15,9 @@ class AssignmentController extends Controller
      */
     public function index()
     {
-        $posts = Assignment::all();
-        return view('posts.index', [
-            'posts' => $posts
+        $assignments = Assignment::all();
+        return view('dashboard.index', [
+            'assignments' => $assignments
         ]);
     }
 
@@ -43,10 +45,10 @@ class AssignmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Post  $assignment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Assignment $assignment)
     {
         //
     }
@@ -55,10 +57,10 @@ class AssignmentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\Assignment  $assignment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Assignment $assignment)
     {
         //
     }
@@ -66,10 +68,10 @@ class AssignmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Assignment  $assignment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Assignment $assignment)
     {
         //
     }
