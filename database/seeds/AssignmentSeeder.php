@@ -11,6 +11,6 @@ class AssignmentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\Assignment::class, 5)->create();
     }
 }
