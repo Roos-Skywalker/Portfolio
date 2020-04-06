@@ -36,7 +36,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -47,7 +47,21 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'slug' => 'required',
+            'title' => ['required', 'min:1', 'max:30'],
+            'body' => 'required'
+        ]);
+
+        //dump(request()->all()); Debugs this method, remove the redirect to make it work
+        // Saves/persists the new post
+        $post = new Post();
+        $post->slug = request('slug');
+        $post->title = request('title');
+        $post->body = request('body');
+
+        $post->save();
+        return redirect('/blog');
     }
 
     /**
@@ -56,9 +70,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**
@@ -68,9 +83,15 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->slug = request('slug');
+        $post->title = request('title');
+        $post->body = request('body');
+
+        $post->save();
+        return redirect('/blog/' . $post->id);
     }
 
     /**

@@ -28,7 +28,7 @@ class AssignmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('assignment.create');
     }
 
     /**
@@ -39,7 +39,8 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Saves/persists the new assignment
+
     }
 
     /**
