@@ -31,7 +31,11 @@ Route::get('/profile', function () {
 });
 
 Route::get('/blog', 'PostController@index');
+Route::get('/blog/create', 'PostController@create');
+Route::post('/blog', 'PostController@store');
 Route::get('/blog/{id}', 'PostController@show');
+Route::get('/blog/{id}/edit', 'PostController@edit');
+Route::put('/blog/{id}', 'PostController@update');
 
 Route::get('/dashboard', 'AssignmentController@index');
 
