@@ -34,3 +34,7 @@ Route::get('/blog', 'PostController@index');
 Route::get('/blog/{id}', 'PostController@show');
 
 Route::get('/dashboard', 'AssignmentController@index');
+
+Route::get('error/{error}', function($error) {
+    abort($error);
+});
