@@ -7,8 +7,10 @@
                 @foreach($posts as $post)
                 <p>{{$post->title}}</p>
                 <p>{{$post->body}}</p>
-                @endforeach
-            <button type="submit">Add</button>
+            @endforeach
+            <form action="/blog/create" method="GET">
+                <button type="submit">Add</button>
+            </form>
             <button type="submit">Edit</button>
             <button type="submit">Delete</button>
         </span>
