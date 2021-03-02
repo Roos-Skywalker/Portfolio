@@ -1,4 +1,5 @@
 @extends('errors::minimal')
+@extends('layout')
 
 @section('title', __('Unauthorized'))
 @section('code', '401')
