@@ -17,7 +17,7 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * A list of the inputs thate never flashed for validation exceptions.
+     * A list of the inputs that are never flashed for validation exceptions.
      *
      * @var array
      */
@@ -50,12 +50,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        if($this->isHttpException($exception)){
-            $code = $exception->getStatusCode();
-            if($code == '404'){
-                return response()->view('404');
-            }
-        }
         return parent::render($request, $exception);
     }
 }
