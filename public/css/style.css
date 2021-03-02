@@ -1,7 +1,7 @@
 /*Global overrides*/
     body {
         color: black;
-        font-family: 'unispacebold', 'Unispace', 'Share Tech Mono';
+        font-family: 'unispacebold', 'Unispace', 'Share Tech Mono', monospace;
         margin:0;
         background-image: url("../img/background.gif")
     }
@@ -34,10 +34,10 @@
         display: inline-block;
     }
     h1 {
-      font-family: 'cyberspaceregular', 'unispacebold', 'Unispace';
+      font-family: 'cyberspaceregular', 'unispacebold', 'Unispace', monospace;
     }
     h2 {
-      font-family: 'chintzy_cpu_brkregular', 'unispacebold', 'Unispace';
+      font-family: 'chintzy_cpu_brkregular', 'unispacebold', 'Unispace', monospace;
     }
 /*Global*/
     @font-face {
