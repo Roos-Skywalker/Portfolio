@@ -5,14 +5,19 @@
     <div class="flex-center position-ref full-height">
         <div class="code">
             @yield('code')
+            @yield('message')
         </div>
 
         <div class="message" style="padding: 10px;">
-            @yield('message')
-        </div>
-        <div class="message" style="padding: 10px;">
+            <br>
             @yield('details')
+            <br>
+            <button type="submit">Support</button>
         </div>
+
+{{--        <div class="message" style="padding: 10px;">--}}
+{{--            --}}
+{{--        </div>--}}
     </div>
 @endsection
 
