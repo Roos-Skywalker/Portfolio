@@ -15,6 +15,16 @@
             You can help us improve the site by contacting support 😉
             <br>
             <button type="submit">Support</button>
+{{--            Back button from client side, requires JS--}}
+            <form action="javascript:history.back()">
+                <button>Go Back</button>
+            </form>
+{{--            Back button from server side--}}
+{{--            <a href="{{ url()->previous() }}">Back</a>--}}
+
+{{--            <form action="{{ url()->previous() }}">--}}
+{{--                <button>Go Back</button>--}}
+{{--            </form>--}}
         </div>
     </div>
 @endsection
