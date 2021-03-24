@@ -12,12 +12,10 @@
             <br>
             @yield('details')
             <br>
+            You can help us improve the site by contacting support 😉
+            <br>
             <button type="submit">Support</button>
         </div>
-
-{{--        <div class="message" style="padding: 10px;">--}}
-{{--            --}}
-{{--        </div>--}}
     </div>
 @endsection
 
