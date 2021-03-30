@@ -4,8 +4,8 @@
     <h1>Mijn Dashboard</h1>
         <span>
         <h2>Studiemonitor met DB</h2>
-            <label for="NBSA">NBSA grens = 27/45</label>
-            <progress id="NBSA" value="27" max="45"></progress>
+            <label for="NBSA">NBSA grens = 45/45</label>
+            <progress id="NBSA" value="45" max="45"></progress>
             <table>
                 <tr>
                     <th>Blok</th>
@@ -32,8 +32,8 @@
     </span>
     <span>
     <h2>Studiemonitor in HTML</h2>
-<label for="NBSA">NBSA grens = 27/45</label>
-    <progress id="NBSA" value="27" max="45"></progress>
+<label for="NBSA">NBSA grens = 45/45</label>
+    <progress id="NBSA" value="45" max="45"></progress>
     <table>
         <tr>
             <th></th>
