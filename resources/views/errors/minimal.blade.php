@@ -14,7 +14,7 @@
             <br>
             You can help us improve the site by contacting support 😉
             <br>
-            <button type="submit">Support</button>
+            <a href="mailto:SiteAdmin@exampleMail.com?subject=Error report"><button type="submit">Support</button></a>
 {{--            Back button from client side, requires JS--}}
             <form action="javascript:history.back()">
                 <button>Go Back</button>
