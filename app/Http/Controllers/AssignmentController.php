@@ -37,7 +37,16 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        return redirect('dashboard.index');
+        dd($request);
+        $assignment = new Assignment();
+        $assignment->blok = request('blok');
+        $assignment->cursus = request('cursus');
+        $assignment->toets = request('toets');
+        $assignment->weging = request('weging');
+        $assignment->ec = request('ec');
+        $assignment->cijfer = request('cijfer');
+        $assignment->save();
+        return redirect('/dashboard');
     }
 
     /**
@@ -60,7 +69,15 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, Assignment $assignment)
     {
-        return redirect('dashboard.index');
+        dd($request);
+        $assignment->blok = request('blok');
+        $assignment->cursus = request('cursus');
+        $assignment->toets = request('toets');
+        $assignment->weging = request('weging');
+        $assignment->ec = request('ec');
+        $assignment->cijfer = request('cijfer');
+        $assignment->save();
+        return redirect('/dashboard');
     }
 
     /**
@@ -72,6 +89,6 @@ class AssignmentController extends Controller
     public function destroy(Request $request, Assignment $assignment)
     {
         $assignment->delete($request->all());
-        return redirect('/dashboard.index');
+        return redirect('/dashboard');
     }
 }
