@@ -14,6 +14,7 @@
                     <th>Weging</th>
                     <th>EC</th>
                     <th>Cijfer</th>
+                    <th></th>
                 </tr>
                 @foreach ($assignments as $assignment)
                     <tr>
@@ -23,12 +24,21 @@
                         <td>{{$assignment->weging}}%</td>
                         <td>{{$assignment->ec}}</td>
                         <td>{{$assignment->cijfer}}</td>
+                        <td><a href=""><button>Edit</button></a></td>
+                        <td><form action=""><button>Delete</button></form></td>
                     </tr>
                 @endforeach
             </table>
-                <button type="submit">Add</button>
-                <button type="submit">Edit</button>
-                <button type="submit">Delete</button>
+                <a href="/dashboard/create">
+                    <button>Add</button>
+                </a>
+{{--                <a href="{{route('assignments.edit', $assignment)}}">--}}
+{{--                    <button>edit</button>--}}
+{{--                </a>--}}
+{{--                <form action="/companies/{{$assignment->id}}?_method=DELETE">--}}
+{{--                    @csrf--}}
+{{--                    <button>Delete</button>--}}
+{{--                </form>--}}
     </span>
     <span>
     <h2>Studiemonitor in HTML</h2>
