@@ -16,9 +16,7 @@ class AssignmentController extends Controller
     public function index()
     {
         $assignments = Assignment::all();
-        return view('dashboard.index', [
-            'assignments' => $assignments
-        ]);
+        return view('dashboard.index', compact('assignments'));
     }
 
     /**
@@ -28,7 +26,7 @@ class AssignmentController extends Controller
      */
     public function create()
     {
-        return view('assignment.create');
+        return view('dashboard.create');
     }
 
     /**
@@ -39,8 +37,7 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        // Saves/persists the new assignment
-
+        return redirect('dashboard.index');
     }
 
     /**
@@ -51,7 +48,7 @@ class AssignmentController extends Controller
      */
     public function edit(Assignment $assignment)
     {
-        //
+        return view('dashboard.edit', compact('assignment'));
     }
 
     /**
@@ -63,7 +60,7 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, Assignment $assignment)
     {
-        //
+        return redirect('dashboard.index');
     }
 
     /**
@@ -72,8 +69,9 @@ class AssignmentController extends Controller
      * @param  \App\Assignment  $assignment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Assignment $assignment)
+    public function destroy(Request $request, Assignment $assignment)
     {
-        //
+        $assignment->delete($request->all());
+        return redirect('/dashboard.index');
     }
 }
