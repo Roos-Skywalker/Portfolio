@@ -37,6 +37,15 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'blok' => ['required'],
+            'cursus' => ['required'],
+            'toets' => ['required'],
+            'weging' => ['required'],
+            'ec' => ['required'],
+            'cijfer' => ['required']
+        ]);
+
         dd($request);
         $assignment = new Assignment();
         $assignment->blok = request('blok');
@@ -69,6 +78,15 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, Assignment $assignment)
     {
+        $request->validate([
+            'blok' => ['required'],
+            'cursus' => ['required'],
+            'toets' => ['required'],
+            'weging' => ['required'],
+            'ec' => ['required'],
+            'cijfer' => ['required']
+        ]);
+
         dd($request);
         $assignment->blok = request('blok');
         $assignment->cursus = request('cursus');
