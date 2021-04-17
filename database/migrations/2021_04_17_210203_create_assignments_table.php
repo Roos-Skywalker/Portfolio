@@ -14,7 +14,7 @@ class CreateAssignmentsTable extends Migration
     public function up()
     {
         Schema::create('assignments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->unsignedTinyInteger('blok');
             $table->string('cursus');
             $table->string('toets');

@@ -35,10 +35,7 @@ Route::get('/blog/{id}', 'PostController@show');
 Route::get('/blog/{id}/edit', 'PostController@edit');
 Route::put('/blog/{id}', 'PostController@update');
 
-Route::resource('/dashboard', 'AssignmentController');
-Route::put('/dashboard/{id}', 'AssignmentController@update');
-Route::post('/dashboard', 'AssignmentController@store');
-Route::delete('/dashboard/{id}', 'AssignmentController@destroy');
+Route::resource('/assignments', 'AssignmentController');
 
 Route::get('error/{error}', function($error) {
     abort($error);

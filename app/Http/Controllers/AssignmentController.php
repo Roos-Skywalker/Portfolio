@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use App\Assignment;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class AssignmentController extends Controller
@@ -16,7 +16,7 @@ class AssignmentController extends Controller
     public function index()
     {
         $assignments = Assignment::all();
-        return view('dashboard.index', compact('assignments'));
+        return view('assignments.index', compact('assignments'));
     }
 
     /**
@@ -26,7 +26,7 @@ class AssignmentController extends Controller
      */
     public function create()
     {
-        return view('dashboard.create');
+        return view('assignments.create');
     }
 
     /**
@@ -55,18 +55,29 @@ class AssignmentController extends Controller
         $assignment->ec = request('ec');
         $assignment->cijfer = request('cijfer');
         $assignment->save();
-        return redirect('/dashboard');
+        return redirect('/assignments.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Assignment  $assignment
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Assignment $assignment)
+    {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $assignment
+     * @param  \App\Assignment  $assignment
      * @return \Illuminate\Http\Response
      */
     public function edit(Assignment $assignment)
     {
-        return view('dashboard.edit', compact('assignment'));
+        return view('assignments.edit', compact('assignment'));
     }
 
     /**
@@ -95,7 +106,7 @@ class AssignmentController extends Controller
         $assignment->ec = request('ec');
         $assignment->cijfer = request('cijfer');
         $assignment->save();
-        return redirect('/dashboard');
+        return redirect('/assignments.index');
     }
 
     /**
@@ -107,6 +118,6 @@ class AssignmentController extends Controller
     public function destroy(Request $request, Assignment $assignment)
     {
         $assignment->delete($request->all());
-        return redirect('/dashboard');
+        return redirect('/assignments.index');
     }
 }

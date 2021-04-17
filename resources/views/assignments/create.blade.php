@@ -4,7 +4,7 @@
         <h1>Mijn Dashboard</h1>
         <span>
         <h2>Maak een nieuw vak</h2>
-            <form method="POST" action="/dashboard/">
+            <form method="POST" action="/assignments/">
                 @csrf
                 <table>
                 <tr>
@@ -26,7 +26,7 @@
                 </table>
                 <button type="submit">Save changes</button>
             </form>
-                <a href="/dashboard">
+                <a href="/assignments">
                     <button>Cancel</button>
                 </a>
         </span>

@@ -4,7 +4,7 @@
         <h1>Mijn Dashboard</h1>
         <span>
         <h2>Bewerk een vak</h2>
-            <form method="POST" action="/dashboard/{{$assignment->id}}">
+            <form method="POST" action="/assignments/{{$assignment->id}}">
                 @csrf
                 @method('put')
                 <table>
@@ -27,7 +27,7 @@
                 </table>
                 <button type="submit">Save changes</button>
             </form>
-                <a href="/dashboard">
+                <a href="/assignments">
                     <button>Cancel</button>
                 </a>
         </span>
