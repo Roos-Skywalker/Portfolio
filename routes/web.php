@@ -20,9 +20,7 @@ Route::get('/beroepsbeeld', function () {
 Route::get('/construction', function () {
     return view('construction');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
 Route::get('/motivatie', function () {
     return view('motivatie');
 });
