@@ -16,12 +16,12 @@
                     <th>Cijfer</th>
                 </tr>
                 <tr>
-                    <td><input></td>
-                    <td><input></td>
-                    <td><input></td>
-                    <td><input>%</td>
-                    <td><input></td>
-                    <td><input></td>
+                    <td><input name="blok"></td>
+                    <td><input name="cursus"></td>
+                    <td><input name="toets"></td>
+                    <td><input name="weging">%</td>
+                    <td><input name="ec"></td>
+                    <td><input name="cijfer"></td>
                 </tr>
                 </table>
                 <button type="submit">Save changes</button>

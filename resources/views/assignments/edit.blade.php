@@ -17,12 +17,12 @@
                     <th>Cijfer</th>
                 </tr>
                 <tr>
-                    <td><input value="{{$assignment->blok}}"></td>
-                    <td><input value="{{$assignment->cursus}}"></td>
-                    <td><input value="{{$assignment->toets}}"></td>
-                    <td><input value="{{$assignment->weging}}">%</td>
-                    <td><input value="{{$assignment->ec}}"></td>
-                    <td><input value="{{$assignment->cijfer}}"></td>
+                    <td><input name="blok" value="{{$assignment->blok}}"></td>
+                    <td><input name="cursus" value="{{$assignment->cursus}}"></td>
+                    <td><input name="toets" value="{{$assignment->toets}}"></td>
+                    <td><input name="weging" value="{{$assignment->weging}}">%</td>
+                    <td><input name="ec" value="{{$assignment->ec}}"></td>
+                    <td><input name="cijfer" value="{{$assignment->cijfer}}"></td>
                 </tr>
                 </table>
                 <button type="submit">Save changes</button>

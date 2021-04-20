@@ -25,7 +25,13 @@
                         <td>{{$assignment->ec}}</td>
                         <td>{{$assignment->cijfer}}</td>
                         <td><a href="{{route('assignments.edit', $assignment)}}"><button>Edit</button></a></td>
-                        <td><form action="/assignments/{{$assignment->id}}?_method=DELETE">@csrf<button>Delete</button></form></td>
+                        <td>
+                            <form method="POST" action="/assignments/{{$assignment->id}}">
+                                @csrf
+                                @method("DELETE")
+                                <button>Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </table>
