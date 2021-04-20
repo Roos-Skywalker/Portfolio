@@ -37,25 +37,18 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'blok' => ['required'],
-            'cursus' => ['required'],
-            'toets' => ['required'],
-            'weging' => ['required'],
-            'ec' => ['required'],
-            'cijfer' => ['required']
-        ]);
+        $validated = $this->validateAssignment($request);
 
-        dd($request);
-        $assignment = new Assignment();
-        $assignment->blok = request('blok');
-        $assignment->cursus = request('cursus');
-        $assignment->toets = request('toets');
-        $assignment->weging = request('weging');
-        $assignment->ec = request('ec');
-        $assignment->cijfer = request('cijfer');
-        $assignment->save();
-        return redirect('/assignments.index');
+        Assignment::create($validated);
+//        $assignment = new Assignment();
+//        $assignment->blok = request('blok');
+//        $assignment->cursus = request('cursus');
+//        $assignment->toets = request('toets');
+//        $assignment->weging = request('weging');
+//        $assignment->ec = request('ec');
+//        $assignment->cijfer = request('cijfer');
+//        $assignment->save();
+        return redirect(route('assignments.index'));
     }
 
     /**
@@ -89,24 +82,10 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, Assignment $assignment)
     {
-        $request->validate([
-            'blok' => ['required'],
-            'cursus' => ['required'],
-            'toets' => ['required'],
-            'weging' => ['required'],
-            'ec' => ['required'],
-            'cijfer' => ['required']
-        ]);
-
-        dd($request);
-        $assignment->blok = request('blok');
-        $assignment->cursus = request('cursus');
-        $assignment->toets = request('toets');
-        $assignment->weging = request('weging');
-        $assignment->ec = request('ec');
-        $assignment->cijfer = request('cijfer');
-        $assignment->save();
-        return redirect('/assignments.index');
+        $assignment->update(
+            $this->validateAssignment($request)
+        );
+        return redirect(route('assignments.index'));
     }
 
     /**
@@ -117,7 +96,24 @@ class AssignmentController extends Controller
      */
     public function destroy(Request $request, Assignment $assignment)
     {
-        $assignment->delete($request->all());
-        return redirect('/assignments.index');
+        $assignment->delete();
+        return redirect(route('assignments.index'));
+    }
+
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function validateAssignment(Request $request): array
+    {
+        $validated = $request->validate([
+            'blok' => ['required'],
+            'cursus' => ['required'],
+            'toets' => ['required'],
+            'weging' => ['required'],
+            'ec' => ['required'],
+            'cijfer' => ['required']
+        ]);
+        return $validated;
     }
 }
