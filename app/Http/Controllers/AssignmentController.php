@@ -37,6 +37,7 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
         $validated = $this->validateAssignment($request);
 
         Assignment::create($validated);
