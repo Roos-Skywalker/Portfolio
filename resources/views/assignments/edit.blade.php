@@ -23,103 +23,48 @@
 {{--                <td><input name="blok" value="{{$assignment->blok}}"></td>--}}
 {{--            @endif--}}
 
-            <form method="POST" action="/assignments/{{$assignment->id}}">
+            <form method="POST" action="{{route('assignments.index')}}/{{$assignment->id}}">
                 @csrf
                 @method('put')
                 <table>
-                <tr>
-                    <th>Blok</th>
-                    <th>Cursus</th>
-                    <th>Toets</th>
-                    <th>Weging</th>
-                    <th>EC</th>
-                    <th>Cijfer</th>
-                </tr>
-                <tr>
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('blok') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}">{{$message}}</td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                            <td><input name="toets" value="{{$assignment->toets}}"></td>
-                            <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                            <td><input name="ec" value="{{$assignment->cijfer}}"></td>
-                        @endforeach
-                    @else
-                        <td><input name="blok" value="{{$assignment->blok}}"></td>
-                    @endif
-
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('cursus') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}"></td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}">{{$message}}</td>
-                            <td><input name="toets" value="{{$assignment->toets}}"></td>
-                            <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                            <td><input name="ec" value="{{$assignment->cijfer}}"></td>
-                        @endforeach
-                    @else
-                        <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                    @endif
-
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('toets') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}"></td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                            <td><input name="toets" value="{{$assignment->toets}}">{{$message}}</td>
-                            <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                            <td><input name="ec" value="{{$assignment->cijfer}}"></td>
-                        @endforeach
-                    @else
-                        <td><input name="toets" value="{{$assignment->toets}}"></td>
-                    @endif
-
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('weging') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}"></td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                            <td><input name="toets" value="{{$assignment->toets}}"></td>
-                            <td><input name="weging" value="{{$assignment->weging}}">% {{$message}}</td>
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                            <td><input name="ec" value="{{$assignment->cijfer}}"></td>
-                        @endforeach
-                    @else
-                        <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                    @endif
-
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('ec') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}"></td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                            <td><input name="toets" value="{{$assignment->toets}}"></td>
-                            <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                            <td><input name="ec" value="{{$assignment->ec}}">{{$message}}</td>
-                            <td><input name="ec" value="{{$assignment->cijfer}}"></td>
-                        @endforeach
-                    @else
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                    @endif
-
-                    @if(count($errors) > 0)
-                        @foreach($errors->get('cijfer') as $message)
-                            <td><input name="blok" value="{{$assignment->blok}}"></td>
-                            <td><input name="cursus" value="{{$assignment->cursus}}"></td>
-                            <td><input name="toets" value="{{$assignment->toets}}"></td>
-                            <td><input name="weging" value="{{$assignment->weging}}">%</td>
-                            <td><input name="ec" value="{{$assignment->ec}}"></td>
-                            <td><input name="cijfer" value="{{$assignment->cijfer}}">{{$message}}</td>
-                        @endforeach
-                    @else
-                        <td><input name="cijfer" value="{{$assignment->cijfer}}"></td>
-                    @endif
-                </tr>
+                    <tr>
+                        <th>Blok</th>
+                        <th>Cursus</th>
+                        <th>Toets</th>
+                        <th>Weging</th>
+                        <th>EC</th>
+                        <th>Cijfer</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="blok" class="@error('blok') red-border @enderror" value="{{old('blok') ? old('blok') : $assignment->blok}}">
+                            @error('blok')<br>{{$message}}@enderror
+                        </td>
+                        <td>
+                            <input name="cursus" class="@error('blok') red-border @enderror" value="{{old('cursus') ? old('cursus') : $assignment->cursus}}">
+                            @error('cursus')<br>{{$message}}@enderror
+                        </td>
+                        <td>
+                            <input name="toets" class="@error('blok') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
+                            @error('toets')<br>{{$message}}@enderror
+                        </td>
+                        <td>
+                            <input name="weging" class="@error('blok') red-border @enderror" value="{{old('weging') ? old('weging') : $assignment->weging}}">
+                            % @error('weging')<br>{{$message}}@enderror
+                        </td>
+                        <td>
+                            <input name="ec" class="@error('blok') red-border @enderror" value="{{old('ec') ? old('ec') : $assignment->ec}}">
+                            @error('ec')<br>{{$message}}@enderror
+                        </td>
+                        <td>
+                            <input name="cijfer" class="@error('blok') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : $assignment->cijfer}}">
+                            @error('cijfer')<br>{{$message}}@enderror
+                        </td>
+                    </tr>
                 </table>
                 <button type="submit">Save changes</button>
             </form>
-
-
-                <a href="/assignments">
+                <a href="{{route('assignments.index')}}">
                     <button>Cancel</button>
                 </a>
         </span>
