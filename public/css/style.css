@@ -147,6 +147,10 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+/*Error pages and properties*/
+    .red-border {
+        border: 3px solid red;
+    }
 /*Construction page*/
     .constructionbg {
       background-color: #F6F6F6;

@@ -38,27 +38,27 @@
                     <tr>
                         <td>
                             <input name="blok" class="@error('blok') red-border @enderror" value="{{old('blok') ? old('blok') : $assignment->blok}}">
-                            @error('blok')<br>{{$message}}@enderror
+                                @error('blok')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="cursus" class="@error('blok') red-border @enderror" value="{{old('cursus') ? old('cursus') : $assignment->cursus}}">
-                            @error('cursus')<br>{{$message}}@enderror
+                            <input name="cursus" class="@error('cursus') red-border @enderror" value="{{old('cursus') ? old('cursus') : $assignment->cursus}}">
+                                @error('cursus')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="toets" class="@error('blok') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
-                            @error('toets')<br>{{$message}}@enderror
+                            <input name="toets" class="@error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
+                                @error('toets')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="weging" class="@error('blok') red-border @enderror" value="{{old('weging') ? old('weging') : $assignment->weging}}">
-                            % @error('weging')<br>{{$message}}@enderror
+                            <input name="weging" class="@error('weging') red-border @enderror" value="{{old('weging') ? old('weging') : $assignment->weging}}">
+                                % @error('weging')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="ec" class="@error('blok') red-border @enderror" value="{{old('ec') ? old('ec') : $assignment->ec}}">
-                            @error('ec')<br>{{$message}}@enderror
+                            <input name="ec" class="@error('ec') red-border @enderror" value="{{old('ec') ? old('ec') : $assignment->ec}}">
+                                @error('ec')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="cijfer" class="@error('blok') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : $assignment->cijfer}}">
-                            @error('cijfer')<br>{{$message}}@enderror
+                            <input name="cijfer" class="@error('cijfer') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : $assignment->cijfer}}">
+                                @error('cijfer')<br>{{$message}}@enderror
                         </td>
                     </tr>
                 </table>
