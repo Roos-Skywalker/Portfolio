@@ -39,16 +39,7 @@ class AssignmentController extends Controller
     {
 //        dd($request);
         $validated = $this->validateAssignment($request);
-
         Assignment::create($validated);
-//        $assignment = new Assignment();
-//        $assignment->blok = request('blok');
-//        $assignment->cursus = request('cursus');
-//        $assignment->toets = request('toets');
-//        $assignment->weging = request('weging');
-//        $assignment->ec = request('ec');
-//        $assignment->cijfer = request('cijfer');
-//        $assignment->save();
         return redirect(route('assignments.index'));
     }
 
@@ -114,7 +105,16 @@ class AssignmentController extends Controller
             'weging' => ['required'],
             'ec' => ['required'],
             'cijfer' => ['required']
+        ],
+        [
+            'blok.required' => 'Er moet ten minste 1 blok zijn en maximaal 4 blokken.',
+            'cursus.required' => 'Je moet de naam van het vak aangeven.',
+            'toets.required' => 'Ieder vak heeft een toets, omschrijf hier het soort toets.',
+            'weging.required' => 'Een vak of een onderdeel daarvan heeft een weging nodig.',
+            'ec.required' => 'Hoeveel studiepunten krijg je.',
+            'cijfer.required' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.'
         ]);
         return $validated;
     }
 }
+
