@@ -25,19 +25,19 @@
                                 @error('cursus')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="toets" class="@error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : ''}}">
+                            *<input name="toets" class="@error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : ''}}">
                                 @error('toets')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="weging" class="@error('weging') red-border @enderror" value="{{old('weging') ? old('weging') : ''}}">
-                                % @error('weging')<br>{{$message}}@enderror
+                            <input name="weging" class="@error('weging') red-border @enderror" value="{{old('weging') ? old('weging') : ''}}">%
+                                @error('weging')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="ec" class="@error('ec') red-border @enderror" value="{{old('ec') ? old('ec') : ''}}">
+                            *<input name="ec" class="@error('ec') red-border @enderror" value="{{old('ec') ? old('ec') : ''}}">
                                 @error('ec')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            <input name="cijfer" class="@error('cijfer') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : ''}}">
+                            *<input name="cijfer" class="@error('cijfer') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : ''}}">
                                 @error('cijfer')<br>{{$message}}@enderror
                         </td>
                     </tr>
