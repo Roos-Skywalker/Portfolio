@@ -17,10 +17,10 @@ class CreateAssignmentsTable extends Migration
             $table->id();
             $table->unsignedTinyInteger('blok');
             $table->string('cursus');
-            $table->string('toets');
+            $table->string('toets')->nullable();
             $table->unsignedTinyInteger('weging');
-            $table->unsignedDecimal('ec');
-            $table->unsignedDecimal('cijfer');
+            $table->unsignedDecimal('ec')->nullable()->default(0);
+            $table->unsignedDecimal('cijfer')->nullable();
             $table->timestamps();
         });
     }

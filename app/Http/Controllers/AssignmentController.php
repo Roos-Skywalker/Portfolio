@@ -99,20 +99,31 @@ class AssignmentController extends Controller
     public function validateAssignment(Request $request): array
     {
         $validated = $request->validate([
-            'blok' => ['required'],
-            'cursus' => ['required'],
-            'toets' => ['required'],
-            'weging' => ['required'],
-            'ec' => ['required'],
-            'cijfer' => ['required']
+            'blok' => ['required', 'numeric', 'min:1', 'max:4'],
+            'cursus' => ['required', 'alpha_dash'],
+            'toets' => ['alpha_dash'],
+            'weging' => ['required', 'numeric', 'min:0', 'max:100'],
+            'ec' => ['numeric', 'min:0', 'max:20'],
+            'cijfer' => ['numeric', 'min:1', 'max:10']
         ],
         [
-            'blok.required' => 'Er moet ten minste 1 blok zijn en maximaal 4 blokken.',
+            'blok.required' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
+            'blok.numeric' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
+            'blok.min' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
+            'blok.max' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
             'cursus.required' => 'Je moet de naam van het vak aangeven.',
-            'toets.required' => 'Ieder vak heeft een toets, omschrijf hier het soort toets.',
-            'weging.required' => 'Een vak of een onderdeel daarvan heeft een weging nodig.',
-            'ec.required' => 'Hoeveel studiepunten krijg je.',
-            'cijfer.required' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.'
+            'cursus.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
+            'toets.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
+            'weging.required' => 'Een cursus heeft een weging nodig.',
+            'weging.numeric' => 'De weging moet een getal zijn tussen de 0 en 100 en gebruikt punt (.) notatie in plaats van komma notatie (,).',
+            'weging.min' => 'De weging moet een getal zijn tussen de 0 en 100.',
+            'weging.max' => 'De weging moet een getal zijn tussen de 0 en 100.',
+            'ec.numeric' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
+            'ec.min' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
+            'ec.max' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
+            'cijfer.numeric' => 'Een behaald cijfer is tussen de 1 en 10 en gebruikt punt (.) notatie in plaats van komma notatie (,).',
+            'cijfer.min' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.',
+            'cijfer.max' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.'
         ]);
         return $validated;
     }
