@@ -64,10 +64,10 @@
                         </td>
                     </tr>
                 </table>
-                <button type="submit">Save changes</button>
+                <button type="submit">Opslaan</button>
             </form>
                 <a href="{{route('assignments.index')}}">
-                    <button>Cancel</button>
+                    <button>Annuleren</button>
                 </a>
         </span>
     </main>
