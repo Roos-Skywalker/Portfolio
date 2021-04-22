@@ -43,19 +43,22 @@
                             <input name="cursus" class="@error('cursus') red-border @enderror" value="{{old('cursus') ? old('cursus') : $assignment->cursus}}">
                                 @error('cursus')<br>{{$message}}@enderror
                         </td>
-                        <td>
-                            *<input name="toets" class="tooltip @error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
+                        <td class="tooltip">
+                            <span class="tooltiptext">Optioneel<br><br>Niet elke cursus heeft toets.</span>
+                            *<input name="toets" class="@error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
                                 @error('toets')<br>{{$message}}@enderror
                         </td>
                         <td>
                             <input name="weging" class="@error('weging') red-border @enderror" value="{{old('weging') ? old('weging') : $assignment->weging}}">%
                                 @error('weging')<br>{{$message}}@enderror
                         </td>
-                        <td>
+                        <td class="tooltip">
+                            <span class="tooltiptext">Optioneel<br><br>Cursussen zonder toets geven geen studiepunten. Laat leeg als er geen toets is.</span>
                             *<input name="ec" class="@error('ec') red-border @enderror" value="{{old('ec') ? old('ec') : $assignment->ec}}">
                                 @error('ec')<br>{{$message}}@enderror
                         </td>
-                        <td>
+                        <td class="tooltip">
+                            <span class="tooltiptext">Optioneel<br><br>Laat leeg als je de toets nog niet hebt gedaan of als er geen toets is.</span>
                             *<input name="cijfer" class="@error('cijfer') red-border @enderror" value="{{old('cijfer') ? old('cijfer') : $assignment->cijfer}}">
                                 @error('cijfer')<br>{{$message}}@enderror
                         </td>

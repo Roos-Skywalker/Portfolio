@@ -151,6 +151,41 @@
     .red-border {
         border: 3px solid red;
     }
+/* Tooltip container */
+    .tooltip {
+        position: relative;
+        /*display: inline-block;*/
+    }
+/* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+
+    /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -75px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    }
+/* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;  /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
 /*Construction page*/
     .constructionbg {
       background-color: #F6F6F6;
