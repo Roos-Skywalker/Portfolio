@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Mijn Dashboard</h1>
-        <span>
+        <span class="span">
         <h2>Studiemonitor met DB</h2>
         <form method="POST" action="/blog">
             @csrf

@@ -2,9 +2,8 @@
 @section('content')
     <main>
         <h1>Mijn Dashboard</h1>
-        <span>
+        <span class="span">
         <h2>Bewerk een vak</h2>
-
 {{--Basic error display, shows all errors--}}
 {{--             @if(count($errors) > 0)--}}
 {{--            <ul>--}}
@@ -45,7 +44,7 @@
                                 @error('cursus')<br>{{$message}}@enderror
                         </td>
                         <td>
-                            *<input name="toets" class="@error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
+                            *<input name="toets" class="tooltip @error('toets') red-border @enderror" value="{{old('toets') ? old('toets') : $assignment->toets}}">
                                 @error('toets')<br>{{$message}}@enderror
                         </td>
                         <td>

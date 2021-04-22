@@ -2,7 +2,7 @@
 @section('content')
     <main>
     <h1>Mijn Dashboard</h1>
-        <span>
+        <span class="span">
         <h2>Studiemonitor met DB</h2>
             <label for="NBSA">NBSA grens = 45/45</label>
             <progress id="NBSA" value="45" max="45"></progress>
@@ -39,7 +39,7 @@
                     <button>Add</button>
                 </a>
     </span>
-    <span>
+    <span class="span">
     <h2>Studiemonitor in HTML</h2>
 <label for="NBSA">NBSA grens = 45/45</label>
     <progress id="NBSA" value="45" max="45"></progress>
@@ -230,7 +230,7 @@
         </tr>
     </table>
     </span>
-    <span>
+    <span class="span">
         <h2>Studiewijzer</h2>
             <ul id="studiewijzer">
                 <li id="studie"><a href="https://hz.nl/uploads/documents/Regelingen/OERS/OER-HZ-2019-2020-Ba.pdf" target="_blank">Onderwijs en Examenregelement (OER)</a></li>

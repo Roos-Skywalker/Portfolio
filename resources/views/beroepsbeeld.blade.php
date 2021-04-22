@@ -2,7 +2,7 @@
 @section('content')
   <main>
     <h1>Beroepsbeeld</h1>
-  <span>
+  <span class="span">
     <h2>Avanade</h2>
       <h3>Bedrijfscultuur</h3>
         <p>Bij Avanade heb je veel eigen regie, en zelf discipline nodig. Managers en projectontwikkelaars zijn er om jouw te helpen, en behandelen je als gelijke.</p>
@@ -34,7 +34,7 @@
       </details>
   </span>
   <img class="mobileImage alignRight" src="/img/Selfie2.png">
-  <span>
+  <span class="span">
     <h2>Betabit</h2>
       <h3>Bedrijfscultuur</h3>
         <p>Bij Betabit staat innovatie altijd voorop. Dat vinden ze zo belangrijk, dat zo soms geld investeren in hun klanten als zij ambitieus genoeg zijn.</p>
@@ -61,7 +61,7 @@
         Ik liet mijn kaartje achter op de Betabit stalling tijdens het Job event.
       </details>
   </span>
-  <span>
+  <span class="span">
     <h2>Conclusion</h2>
       <h3>Bedrijfscultuur</h3>
         <p>Dit bedrijf is heel erg 'inclusief' en informeel. Collega's worden juist aangemoedigd om elkaar als vrienden te behandelen en mensen met autisme zijn juist heel erg gewild.</p>
@@ -87,7 +87,7 @@
       </details>
   </span>
   <img class="mobileImage alignRight" src="/img/Selfie1.png">
-  <span>
+  <span class="span">
     <h2>Gemeente Den Haag</h2>
       <h3>Bedrijfscultuur</h3>
         <p>De ICT afdeling van gemeente Den Haag, heeft heel erg veel autonomie gekregen. Interessant is dan ook de dynamiek tussen het flexibele, moderne ICT team en de slome, hardnekkige hiërarchische bureaucratie.</p>
@@ -114,7 +114,7 @@
         Hij kon mijn verhaal erg waarderen en wilde graag meer over mij weten. Werken bij de overheid zie ik wel zitten, daar er een grote uitdaging ligt in her informeren en overtuigen van onwetende mensen. Volgens hem zijn mensen met een overbruggende functie tussen het bedrijfsleven en de IT, het belangrijkst om een project tot een succes te maken. Ik heb met plezier mijn kaartje achter gelaten.
       </details>
   </span>
-  <span>
+  <span class="span">
     <h2>O'Moda</h2>
       <h3>Bedrijfscultuur</h3>
         <p></p>
@@ -135,7 +135,7 @@
         O’Moda is een Nederlands familiebedrijf gespecialiseerd in schoenen. Ik ben in het hoofdkantoor geweest tijdens de bedrijvensafari met mijn klasgenoten. O’Moda ontwerpt schoenen in Nederland en distribueert ze in Nederland en West-Europa. Wat dit betekent voor de IT, is dat er in het hoofdkantoor nog veel verouderde apparatuur staat, die gebruik maken van een bijna uitgestorven programmeertaal, ongeveer op het niveau van Assembly. Ze willen graag overstappen naar Java omdat Java overal kan werken en omdat er letterlijk nog maar twee mensen zijn in Europa die de oude programmeertaal kennen van hun machines.
       </details>
   </span>
-  <span>
+  <span class="span">
     <h2>Syntess</h2>
       <h3>Bedrijfscultuur</h3>
         <p>Syntess is wat je zou kunnen beschrijven als een 'normaal' bedrijf. Er is een duidelijke hiërarchische structuur, maar het is niet zo stug en afstandelijk als de bureaucratie van de overheid.</p>
@@ -159,7 +159,7 @@
         In tegenstelling tot Q42, komt Syntess 'serieuzer' over: De directeur was in pak, evenals de manager, zelfs de website is 'serieuzer', waar je bij Q42 werknemers kunt sorteren op hoe vaak ze World of Warcraft spelen, krijg je bij Syntess meteen een aanbod van verschillende software paketten.
       </details>
   </span>
-  <span>
+  <span class="span">
     <h2>Q42</h2>
       <h3>Bedrijfscultuur</h3>
         <p>Q42 geeft de indruk van een plat bedrijf waarin er onderling geen onderscheid wordt gemaakt tussen functies. De mensen die ik ontmoette op het Job event gaven de indruk echte nerds te zijn, op een goede manier.</p>
@@ -187,7 +187,7 @@
         Q42 is dan ook een heel duidelijk bedrijf: Ze ontwerpen en bouwen software voor de hoogste bieder. Uiteraard liet ik ook hier mijn contact kaartje achter.
       </details>
   </span>
-  <span>
+  <span class="span">
     <h2>YourSurprise</h2>
       <h3>Bedrijfscultuur</h3>
         <p>YourSurprise is een plat bedrijf waarin er geen onderscheid in de omgang wordt gemaakt tussen functies. Er staat een glijbaan in de kantine, dat zegt genoeg.</p>

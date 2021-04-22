@@ -2,7 +2,7 @@
 @section('content')
   <main>
     <h1>Motivatie</h1>
-  <span>
+  <span class="span">
     <h2>Theorie</h2>
       <h3>Definitie</h3>
         <p>De definitie van motivatie is het willen uitvoeren van één of meerdere acties. Er zijn twee verschillende vormen van motivatie: Intrinsieke motivatie en extrinsieke motivatie.
@@ -80,7 +80,7 @@
         <p>Marieke van Oosterhout stelt dat positieve feedback en aandacht voor prestaties het moraal van mensen verbeterd, Dan Pink speelt hierop in door een concreet voorbeeld te geven van een verdien model waar medewerkers alleen maar hoeven te presteren en verder alle vrijheid hebben. Er is dus veel aandacht voor teambuilding en presteren in een ROWE.</p>
           <hr>
   </span>
-  <span>
+  <span class="span">
     <h2>Prestatiemotivatie</h2>
       <h3>Uitslag</h3>
         <p>Je bent in sterke mate intrinsiek gemotiveerd en redelijk extrinsiek gemotiveerd. Dat je in sterke mate intrinsiek gemotiveerd bent betekent dat je het echt leuk vindt om te studeren. Je beleeft er plezier aan om beter en wijzer te worden. De kans dat jij iets opsteekt van school/je studie is dan ook groot. Dat je in redelijke mate extrinsiek gemotiveerd bent wil zeggen dat je er ook rekening mee houdt wat je met je studie kunt bereiken: een diploma, geld, status of de erkenning van de mensen waar je van houdt. Toch is voor jou interesse de belangrijkste drijfveer om te studeren.</p>
@@ -93,7 +93,7 @@
         <p>Mijn extrinsieke motivatie zou zijn omdat er een reële kans is dat ik kan stage lopen bij AMD.
           Ook vind ik baan garantie zeer belangrijk, omdat ik samen met Jake een leven in Nederland wil opbouwen. Hij is Amerikaan, en volgens de wet moet ik minimaal een 12 maanden contract hebben als ik hem voor de wet mag helpen integreren.</p>
   </span>
-  <span>
+  <span class="span">
     <h2>Carrièreankers</h2>
       <h3>Uitslag belangrijkste ankers</h3>
         <p>Creativiteit (18 punten)</p>
@@ -106,7 +106,7 @@
         <p>Desalniettemin, is het voor mij heel erg belangrijk dat ik moreel achter mijn werk kan staan. Bijvoorbeeld toen ik op het MBO zat werd mij gevraagd om een project te doen voor school waarin we gezichtsherkennings camera’s zouden gebruiken om de aanwezigheid van leerlingen te registreren. Dat op zich is niet zo erg, maar toen privacy wetten aan de laars werden gelapt en alle gegevens werden verzonden naar Google kon ik niet met een schoon geweten dit project leiden. Ik heb daarom dus ook een ander project genomen.</p>
         <p>Uiteraard is een stabiel en een goed inkomen belangrijk, maar rijkdom zelf is niet het doel. Als ik genoeg heb om van te leven en wat te sparen ben ik tevreden. Een gelukkige en tevreden klant vindt ik veel belangrijker. Bijvoorbeeld in mijn hobby als algemene "computer dokter" vraag ik een symbolisch bedrag.</p>
   </span>
-  <span>
+  <span class="span">
       <h3 id=Bronnenlijst>Bronnenlijst</h3>
         <ul>
           <li id=bron0>Bron 0: Eigen kennis</li>

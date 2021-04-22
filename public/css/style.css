@@ -20,7 +20,7 @@
       border-style: hidden;
       border-width: 100px;
     }
-    span {
+    .span {
       display: block;
       background-color: rgba(133, 133, 133, 0.5);
       padding: 100px;
@@ -29,7 +29,7 @@
       border-width: 100px;
       border-radius: 2%;
     }
-    div {
+    .div {
         padding:20px;margin-top:30px;
         display: inline-block;
     }

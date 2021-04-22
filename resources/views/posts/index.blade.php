@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <h1>Blog</h1>
-        <span>
+        <span class="span">
             <h2>Articles</h2>
                 @foreach($posts as $post)
                 <p>{{$post->title}}</p>
