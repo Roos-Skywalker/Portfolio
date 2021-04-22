@@ -101,9 +101,9 @@ class AssignmentController extends Controller
         $validated = $request->validate([
             'blok' => ['required', 'numeric', 'min:1', 'max:4'],
             'cursus' => ['required', 'alpha_dash'],
-            'toets' => ['alpha_dash'],
+            'toets' => ['required_with:ec', 'alpha_dash'],
             'weging' => ['required', 'numeric', 'min:0', 'max:100'],
-            'ec' => ['numeric', 'min:0', 'max:20'],
+            'ec' => ['required_with:toets', 'numeric', 'min:0', 'max:20'],
             'cijfer' => ['numeric', 'min:1', 'max:10']
         ],
         [
@@ -113,14 +113,16 @@ class AssignmentController extends Controller
             'blok.max' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
             'cursus.required' => 'Je moet de naam van het vak aangeven.',
             'cursus.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
+            'toets.required_with' => 'Om studiepunten (EC) te verdienen moet je een toets maken.',
             'toets.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
             'weging.required' => 'Een cursus heeft een weging nodig.',
             'weging.numeric' => 'De weging moet een getal zijn tussen de 0 en 100 en gebruikt punt (.) notatie in plaats van komma notatie (,).',
             'weging.min' => 'De weging moet een getal zijn tussen de 0 en 100.',
             'weging.max' => 'De weging moet een getal zijn tussen de 0 en 100.',
-            'ec.numeric' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
-            'ec.min' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
-            'ec.max' => 'Een cursus geeft tussen de 0 en 20 studiepunten.',
+            'ec.required_with' => 'Hoeveel studiepunten (EC) krijg je voor deze toets?',
+            'ec.numeric' => 'Een cursus geeft tussen de 0 en 20 studiepunten (EC).',
+            'ec.min' => 'Een cursus geeft tussen de 0 en 20 studiepunten (EC).',
+            'ec.max' => 'Een cursus geeft tussen de 0 en 20 studiepunten (EC).',
             'cijfer.numeric' => 'Een behaald cijfer is tussen de 1 en 10 en gebruikt punt (.) notatie in plaats van komma notatie (,).',
             'cijfer.min' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.',
             'cijfer.max' => 'Het behaalde cijfer kan nooit lager dan een 1 zijn of hoger dan een 10.'
