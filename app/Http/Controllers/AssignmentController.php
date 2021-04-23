@@ -101,9 +101,9 @@ class AssignmentController extends Controller
         $validated = $request->validate([
             'blok' => ['required', 'numeric', 'min:1', 'max:4'],
             'cursus' => ['required', 'alpha_dash'],
-            'toets' => ['required_with:ec', 'alpha_dash'],
+            'toets' => ['nullable', 'required_with:ec', 'alpha_dash'],
             'weging' => ['required', 'numeric', 'min:0', 'max:100'],
-            'ec' => ['required_with:toets', 'numeric', 'min:0', 'max:20'],
+            'ec' => ['nullable', 'required_with:toets', 'numeric', 'min:0', 'max:20'],
             'cijfer' => ['nullable', 'numeric', 'min:1', 'max:10']
         ],
         [
