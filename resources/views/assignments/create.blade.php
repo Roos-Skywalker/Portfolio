@@ -25,7 +25,7 @@
                                 @error('cursus')<p class="red-text">{{$message}}</p>@enderror
                         </td>
                         <td class="tooltip @error('toets') red-border @enderror">
-                            <span class="tooltiptext">Optioneel<br><br>Niet elke cursus heeft toets.</span>
+                            <span class="tooltiptext">Optioneel<br><br>Cursussen zonder studiepunten (EC) hebben geen toets. Laat leeg als de cursus geen studiepunten (EC) geeft.</span>
                             *<input name="toets" value="{{old('toets') ? old('toets') : ''}}">
                                 @error('toets')<p class="red-text">{{$message}}</p>@enderror
                         </td>
@@ -34,7 +34,7 @@
                                 @error('weging')<p class="red-text">{{$message}}</p>@enderror
                         </td>
                         <td class="tooltip @error('ec') red-border @enderror">
-                            <span class="tooltiptext">Optioneel<br><br>Cursussen zonder toets geven geen studiepunten. Laat leeg als er geen toets is.</span>
+                            <span class="tooltiptext">Optioneel<br><br>Cursussen zonder toets geven geen studiepunten (EC). Laat leeg als er geen toets is.</span>
                             *<input name="ec" value="{{old('ec') ? old('ec') : ''}}">
                                 @error('ec')<p class="red-text">{{$message}}</p>@enderror
                         </td>

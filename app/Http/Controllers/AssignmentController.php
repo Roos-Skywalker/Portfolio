@@ -115,7 +115,7 @@ class AssignmentController extends Controller
             'cursus.regex' => 'Gebruik alsjeblieft alleen alfabetische karakters, nummers en spaties.',
             'cursus.min' => 'De naam van de cursus mag niet korter zijn dan 2 tekens.',
             'cursus.max' => 'De naam van de cursus mag niet langer zijn dan 40 tekens.',
-            'toets.required_with' => 'Om studiepunten (EC) te verdienen moet je een toets maken.',
+            'toets.required_with' => 'Vul alsjeblieft de naam van de toets in om studiepunten (EC) te verdienen.',
             'toets.regex' => 'Gebruik alsjeblieft alleen alfabetische karakters, nummers en spaties.',
             'toets.min' => 'De naam van de toets mag niet korter zijn dan 2 tekens.',
             'toets.max' => 'De naam van de toets mag niet langer zijn dan 40 tekens.',
