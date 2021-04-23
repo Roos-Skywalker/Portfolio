@@ -104,7 +104,7 @@ class AssignmentController extends Controller
             'toets' => ['required_with:ec', 'alpha_dash'],
             'weging' => ['required', 'numeric', 'min:0', 'max:100'],
             'ec' => ['required_with:toets', 'numeric', 'min:0', 'max:20'],
-            'cijfer' => ['numeric', 'min:1', 'max:10']
+            'cijfer' => ['nullable', 'numeric', 'min:1', 'max:10']
         ],
         [
             'blok.required' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
