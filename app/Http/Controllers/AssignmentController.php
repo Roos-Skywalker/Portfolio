@@ -100,8 +100,8 @@ class AssignmentController extends Controller
     {
         $validated = $request->validate([
             'blok' => ['required', 'numeric', 'min:1', 'max:4'],
-            'cursus' => ['required', 'regex:/^[a-zA-Z\s0-9]+$/'],
-            'toets' => ['nullable', 'required_with:ec', 'regex:/^[a-zA-Z\s0-9]+$/'],
+            'cursus' => ['required', 'regex:/^[a-zA-Z\s0-9]+$/', 'min:2', 'max:40'],
+            'toets' => ['nullable', 'required_with:ec', 'regex:/^[a-zA-Z\s0-9]+$/', 'min:2', 'max:40'],
             'weging' => ['required', 'numeric', 'min:0', 'max:100'],
             'ec' => ['nullable', 'required_with:toets', 'numeric', 'min:0', 'max:20'],
             'cijfer' => ['nullable', 'numeric', 'min:1', 'max:10']
@@ -112,9 +112,13 @@ class AssignmentController extends Controller
             'blok.min' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
             'blok.max' => 'Een schooljaar heeft 4 blokken, kies een blok tussen de 1 en 4 alsjeblieft.',
             'cursus.required' => 'Je moet de naam van het vak aangeven.',
-            'cursus.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
+            'cursus.regex' => 'Gebruik alsjeblieft alleen alfabetische karakters, nummers en spaties.',
+            'cursus.min' => 'De naam van de cursus mag niet korter zijn dan 2 tekens.',
+            'cursus.max' => 'De naam van de cursus mag niet langer zijn dan 40 tekens.',
             'toets.required_with' => 'Om studiepunten (EC) te verdienen moet je een toets maken.',
-            'toets.alpha_dash' => 'Gebruik alsjeblieft alleen alfabetische karakters en nummers.',
+            'toets.regex' => 'Gebruik alsjeblieft alleen alfabetische karakters, nummers en spaties.',
+            'toets.min' => 'De naam van de toets mag niet korter zijn dan 2 tekens.',
+            'toets.max' => 'De naam van de toets mag niet langer zijn dan 40 tekens.',
             'weging.required' => 'Een cursus heeft een weging nodig.',
             'weging.numeric' => 'De weging moet een getal zijn tussen de 0 en 100 en gebruikt punt (.) notatie in plaats van komma notatie (,).',
             'weging.min' => 'De weging moet een getal zijn tussen de 0 en 100.',
