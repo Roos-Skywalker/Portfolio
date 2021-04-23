@@ -24,19 +24,19 @@
                         <td>{{$assignment->weging}}%</td>
                         <td>{{$assignment->ec}}</td>
                         <td>{{$assignment->cijfer}}</td>
-                        <td><a href="{{route('assignments.edit', $assignment)}}"><button>Edit</button></a></td>
+                        <td><a href="{{route('assignments.edit', $assignment)}}"><button>Bewerk</button></a></td>
                         <td>
                             <form method="POST" action="/assignments/{{$assignment->id}}">
                                 @csrf
                                 @method("DELETE")
-                                <button>Delete</button>
+                                <button>Verwijder</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </table>
                 <a href="/assignments/create">
-                    <button>Add</button>
+                    <button>Nieuw</button>
                 </a>
     </span>
     <span class="span">
