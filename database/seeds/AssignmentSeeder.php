@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Assignment;
 use Illuminate\Database\Seeder;
 
-class AssignmentSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seed the application's database.
      *
      * @return void
      */
     public function run()
     {
-        Assignment::factory()->count(5)->create();
+        // \App\Models\User::factory(10)->create();
+        $this->call(AssignmentSeeder::class);
     }
 }
