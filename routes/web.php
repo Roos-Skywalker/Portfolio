@@ -14,18 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/beroepsbeeld', function () {
-    return view('beroepsbeeld');
+
+Route::get('/profile', function () {
+    return view('profile');
 });
-Route::get('/construction', function () {
-    return view('construction');
-});
+
+Route::resource('/assignments', 'AssignmentController');
 
 Route::get('/motivatie', function () {
     return view('motivatie');
 });
-Route::get('/profile', function () {
-    return view('profile');
+
+Route::get('/beroepsbeeld', function () {
+    return view('beroepsbeeld');
+});
+
+Route::get('error/{error}', function($error) {
+    abort($error);
 });
 
 Route::get('/blog', 'PostController@index');
@@ -34,9 +39,3 @@ Route::post('/blog', 'PostController@store');
 Route::get('/blog/{id}', 'PostController@show');
 Route::get('/blog/{id}/edit', 'PostController@edit');
 Route::put('/blog/{id}', 'PostController@update');
-
-Route::resource('/assignments', 'AssignmentController');
-
-Route::get('error/{error}', function($error) {
-    abort($error);
-});

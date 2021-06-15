@@ -100,8 +100,8 @@ class AssignmentController extends Controller
     {
         $validated = $request->validate([
             'blok' => ['required', 'numeric', 'min:1', 'max:4'],
-            'cursus' => ['required', 'regex:/^[a-zA-Z\s0-9]+$/', 'min:2', 'max:40'],
-            'toets' => ['nullable', 'required_with:ec', 'regex:/^[a-zA-Z\s0-9]+$/', 'min:2', 'max:40'],
+            'cursus' => ['required', 'regex:/^[a-zA-Z&\s0-9]+$/', 'min:2', 'max:40'],
+            'toets' => ['nullable', 'required_with:ec', 'regex:/^[a-zA-Z&\s0-9]+$/', 'min:2', 'max:40'],
             'weging' => ['required', 'numeric', 'min:0', 'max:100'],
             'ec' => ['nullable', 'required_with:toets', 'numeric', 'min:0', 'max:20'],
             'cijfer' => ['nullable', 'numeric', 'min:1', 'max:10']

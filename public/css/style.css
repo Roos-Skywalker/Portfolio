@@ -188,26 +188,6 @@
         border-style: solid;
         border-color: transparent transparent rgba(133, 133, 133, 1.0) transparent;
     }
-/*Construction page*/
-    .constructionbg {
-      background-color: #F6F6F6;
-      display: block;
-      text-align: center;
-    }
-    .constructionbutton {
-      background: #FEDE00;
-      display: inline-block;
-      border-color: #000000;
-      border-width: 5px;
-      border-style: solid;
-      max-width: 150px;
-      width: 100%;
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 5px;
-      color: black;
-    }
 /*Dashboard page*/
     #studiewijzer {
       list-style-type: none;

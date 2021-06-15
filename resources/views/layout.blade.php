@@ -17,8 +17,7 @@
         <li class="nav {{Request::path() === 'assignments' ? 'active' : ''}}"><a href="/assignments">Dashboard</a></li>
         <li class="nav {{Request::path() === 'motivatie' ? 'active' : ''}}"><a href="/motivatie">Motivatie</a></li>
         <li class="nav {{Request::path() === 'beroepsbeeld' ? 'active' : ''}}"><a href="/beroepsbeeld">Beroepsbeeld</a></li>
-        <li class="nav {{Request::path() === 'construction' ? 'active' : ''}}"><a href="/construction">Curriculum Vitea</a></li>
-        <li class="nav {{Request::path() === 'blog' ? 'active' : ''}}"><a href="/blog">Blog</a></li>
+        <li class="nav {{Request::path() === 'error/503' ? 'active' : ''}}"><a href="/error/503">Curriculum Vitea</a></li>
     </ul>
 @yield('content')
 </body>
