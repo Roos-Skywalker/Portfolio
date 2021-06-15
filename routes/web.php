@@ -32,10 +32,3 @@ Route::get('/beroepsbeeld', function () {
 Route::get('error/{error}', function($error) {
     abort($error);
 });
-
-Route::get('/blog', 'PostController@index');
-Route::get('/blog/create', 'PostController@create');
-Route::post('/blog', 'PostController@store');
-Route::get('/blog/{id}', 'PostController@show');
-Route::get('/blog/{id}/edit', 'PostController@edit');
-Route::put('/blog/{id}', 'PostController@update');
