@@ -21,7 +21,7 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::resource('/assignments', \App\Http\Controllers\AssignmentController::class);
+Route::resource('/assignments', AssignmentController::class);
 
 Route::get('/motivatie', function () {
     return view('motivatie');
