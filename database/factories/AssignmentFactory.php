@@ -1,17 +1,33 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Assignment;
-use Faker\Generator as Faker;
+use App\Models\Assignment;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Assignment::class, function (Faker $faker) {
-    return [
-        'blok' => $faker->numberBetween(1,4),
-        'cursus' => $faker->word,
-        'toets' => $faker->word,
-        'weging' => $faker->numberBetween(0,100),
-        'ec' => $faker->numberBetween(0,20),
-        'cijfer' => $faker->numberBetween(1,10)
-    ];
-});
+class AssignmentFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Assignment::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'blok' => $this->faker->numberBetween(1,4),
+            'cursus' => $this->faker->word,
+            'toets' => $this->faker->word,
+            'weging' => $this->faker->numberBetween(0,100),
+            'ec' => $this->faker->numberBetween(0,20),
+            'cijfer' => $this->faker->numberBetween(1,10)
+        ];
+    }
+}

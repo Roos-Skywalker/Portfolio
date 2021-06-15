@@ -1,5 +1,8 @@
 <?php
 
+namespace Database\Seeders;
+
+use App\Models\Assignment;
 use Illuminate\Database\Seeder;
 
 class AssignmentSeeder extends Seeder
@@ -11,6 +14,6 @@ class AssignmentSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Assignment::class, 5)->create();
+        Assignment::factory()->count(5)->create();
     }
 }

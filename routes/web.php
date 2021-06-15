@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,7 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::resource('/assignments', 'AssignmentController');
+Route::resource('/assignments', \App\Http\Controllers\AssignmentController::class);
 
 Route::get('/motivatie', function () {
     return view('motivatie');
