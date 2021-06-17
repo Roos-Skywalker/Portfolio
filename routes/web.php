@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssignmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,23 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::view('/profile', 'profile');
 
 Route::resource('/assignments', \App\Http\Controllers\AssignmentController::class);
 
-Route::get('/motivatie', function () {
-    return view('motivatie');
+Route::group(['middleware' => ['auth']], function () {
+//    Route::get('/assignments/create', [AssignmentController::class], 'create');
+//    Route::post('/assignments/', [AssignmentController::class], 'store');
+//
+//    Route::get('/assignments/{assignment}/edit', [AssignmentController::class], 'edit');
+//    Route::put('/assignments/{assignment}', [AssignmentController::class], 'update');
+//
+//    Route::get('/assignments/{assignment}', [AssignmentController::class], 'destroy');
 });
 
-Route::get('/beroepsbeeld', function () {
-    return view('beroepsbeeld');
-});
+Route::view('/motivatie', 'motivatie');
+
+Route::view('/beroepsbeeld', 'beroepsbeeld');
 
 Route::get('error/{error}', function($error) {
     abort($error);
