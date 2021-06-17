@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class AssignmentSeeder extends Seeder
 {
     /**
-     * Run the database seeders.
+     * Run the database seeds.
      *
      * @return void
      */
