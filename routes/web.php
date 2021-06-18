@@ -18,24 +18,14 @@ Route::view('/', 'welcome');
 
 Route::view('/profile', 'profile');
 
-//Route::resource('photos', AssignmentController::class)->only([
-//    'index'
-//]);
-
-Route::resource('/assignments', \App\Http\Controllers\AssignmentController::class);
+Route::resource('/assignments', AssignmentController::class)->only([
+    'index'
+]);
 
 Route::group(['middleware' => ['auth']], function () {
-//    Route::resource('photos', AssignmentController::class)->except([
-//        'index'
-//    ]);
-
-//    Route::get('/assignments/create', [AssignmentController::class], 'create');
-//    Route::post('/assignments/', [AssignmentController::class], 'store');
-//
-//    Route::get('/assignments/{assignment}/edit', [AssignmentController::class], 'edit');
-//    Route::put('/assignments/{assignment}', [AssignmentController::class], 'update');
-//
-//    Route::get('/assignments/{assignment}', [AssignmentController::class], 'destroy');
+    Route::resource('/assignments', AssignmentController::class)->except([
+        'index'
+    ]);
 });
 
 Route::view('/motivatie', 'motivatie');
