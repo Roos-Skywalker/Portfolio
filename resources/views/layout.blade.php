@@ -18,8 +18,21 @@
         <li class="nav {{Request::path() === 'motivatie' ? 'active' : ''}}"><a href="{{url('/motivatie')}}">Motivatie</a></li>
         <li class="nav {{Request::path() === 'beroepsbeeld' ? 'active' : ''}}"><a href="{{url('/beroepsbeeld')}}">Beroepsbeeld</a></li>
         <li class="nav {{Request::path() === 'error/503' ? 'active' : ''}}"><a href="{{url('error/503')}}">Curriculum Vitea</a></li>
-        <li class="nav {{Request::path() === 'error/404' ? 'active' : ''}}"><a href="{{route('logout')}}">Uitloggen</a></li>
+        @if (Route::has('login'))
+            @auth
+                <li class="nav"><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">Uitloggen</a></li>
+            @else
+                <li class="nav {{Request::path() === 'login' ? 'active' : ''}}"><a href="{{route('login')}}">Inloggen</a></li>
+                @if (Route::has('register'))
+                    <li class="nav {{Request::path() === 'register' ? 'active' : ''}}"><a href="{{route('register')}}">Registreren</a></li>
+                @endif
+            @endif
+        @endif
     </ul>
+
+    <form id="logout" action="{{route('logout')}}" method="post" style="display: none">
+        @csrf
+    </form>
 @yield('content')
 </body>
 </html>
