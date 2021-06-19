@@ -13,11 +13,12 @@
     <script type="text/javascript" src="/js/javascript.js"></script>
     <ul class="navbar">
         <li class="nav {{Request::path() === '/' ? 'active' : ''}}"><a href="/">Home</a></li>
-        <li class="nav {{Request::path() === 'profile' ? 'active' : ''}}"><a href="/profile">Profiel pagina</a></li>
-        <li class="nav {{Request::path() === 'assignments' ? 'active' : ''}}"><a href="/assignments">Dashboard</a></li>
-        <li class="nav {{Request::path() === 'motivatie' ? 'active' : ''}}"><a href="/motivatie">Motivatie</a></li>
-        <li class="nav {{Request::path() === 'beroepsbeeld' ? 'active' : ''}}"><a href="/beroepsbeeld">Beroepsbeeld</a></li>
-        <li class="nav {{Request::path() === 'error/503' ? 'active' : ''}}"><a href="/error/503">Curriculum Vitea</a></li>
+        <li class="nav {{Request::path() === 'profile' ? 'active' : ''}}"><a href="{{url('/profile')}}">Profiel pagina</a></li>
+        <li class="nav {{Request::path() === 'assignments' ? 'active' : ''}}"><a href="{{route('assignments.index')}}">Dashboard</a></li>
+        <li class="nav {{Request::path() === 'motivatie' ? 'active' : ''}}"><a href="{{url('/motivatie')}}">Motivatie</a></li>
+        <li class="nav {{Request::path() === 'beroepsbeeld' ? 'active' : ''}}"><a href="{{url('/beroepsbeeld')}}">Beroepsbeeld</a></li>
+        <li class="nav {{Request::path() === 'error/503' ? 'active' : ''}}"><a href="{{url('error/503')}}">Curriculum Vitea</a></li>
+        <li class="nav {{Request::path() === 'error/404' ? 'active' : ''}}"><a href="{{route('logout')}}">Uitloggen</a></li>
     </ul>
 @yield('content')
 </body>
