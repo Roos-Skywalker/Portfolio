@@ -14,7 +14,7 @@
                     <tr>
                         <td class="tooltip @error('email') red-border @enderror">
                             <span class="tooltiptext">Verplicht<br>
-                                <br>Gebruik NIET je echte naam!</span>
+                                <br>Dit E-mail veld is een ONBEVEILIGDE TEST!</span>
                             <input name="email" type="text" value="{{old('email') ? old('email') : ''}}">
                                 @error('email')<p class="red-text">{{$message}}</p>@enderror
                         </td>

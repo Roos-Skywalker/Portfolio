@@ -24,7 +24,8 @@
                         <td>{{$assignment->weging}}%</td>
                         <td>{{$assignment->ec}}</td>
                         <td>{{$assignment->cijfer}}</td>
-                        <td><a href="{{route('assignments.edit', $assignment)}}"><button>Bewerk</button></a></td>
+                        @auth<td><a href="{{route('assignments.edit', $assignment)}}"><button>Bewerk</button></a></td>@endauth
+                        @auth
                         <td>
                             <form method="POST" action="/assignments/{{$assignment->id}}">
                                 @csrf
@@ -32,12 +33,15 @@
                                 <button>Verwijder</button>
                             </form>
                         </td>
+                        @endauth
                     </tr>
                 @endforeach
             </table>
+            @auth
                 <a href="/assignments/create">
                     <button>Nieuw</button>
                 </a>
+            @endauth
     </span>
     <span class="span">
     <h2>Studiemonitor in HTML</h2>
