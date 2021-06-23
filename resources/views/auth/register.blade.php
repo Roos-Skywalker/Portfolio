@@ -14,11 +14,11 @@
                         <th>Wachtwoord bevestigen</th>
                     </tr>
                     <tr>
-                        <td class="tooltip @error('username') red-border @enderror">
+                        <td class="tooltip @error('name') red-border @enderror">
                             <span class="tooltiptext">Verplicht<br>
                                 <br>Gebruik NIET je echte naam!</span>
-                            <input name="username" type="text" value="{{old('username') ? old('username') : ''}}">
-                                @error('username')<p class="red-text">{{$message}}</p>@enderror
+                            <input name="name" type="text" value="{{old('name') ? old('name') : ''}}">
+                                @error('name')<p class="red-text">{{$message}}</p>@enderror
                         </td>
                         <td class="tooltip @error('email') red-border @enderror">
                             <span class="tooltiptext">Verplicht<br>

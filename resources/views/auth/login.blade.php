@@ -8,15 +8,15 @@
             @csrf
                 <table>
                     <tr>
-                        <th>Gebruikersnaam</th>
+                        <th>E-mail</th>
                         <th>Wachtwoord</th>
                     </tr>
                     <tr>
-                        <td class="tooltip @error('username') red-border @enderror">
+                        <td class="tooltip @error('email') red-border @enderror">
                             <span class="tooltiptext">Verplicht<br>
                                 <br>Gebruik NIET je echte naam!</span>
-                            <input name="username" type="text" value="{{old('username') ? old('username') : ''}}">
-                                @error('username')<p class="red-text">{{$message}}</p>@enderror
+                            <input name="email" type="text" value="{{old('email') ? old('email') : ''}}">
+                                @error('email')<p class="red-text">{{$message}}</p>@enderror
                         </td>
                         <td class="tooltip @error('password') red-border @enderror">
                             <span class="tooltiptext">Verplicht<br>
