@@ -20,7 +20,7 @@
         <li class="nav {{Request::path() === 'error/503' ? 'active' : ''}}"><a href="{{url('error/503')}}">Curriculum Vitea</a></li>
         @if (Route::has('login'))
             @auth
-                <li class="nav"><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">Uitloggen</a></li>
+                <li class="nav"><a href="#" onclick="event.preventDefault(); document.getElementById('logout').submit();">Uitloggen</a></li>
             @else
                 <li class="nav {{Request::path() === 'login' ? 'active' : ''}}"><a href="{{route('login')}}">Inloggen</a></li>
                 @if (Route::has('register'))
