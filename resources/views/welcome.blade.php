@@ -3,19 +3,11 @@
     <h1>I should be Cyberspace font</h1>
     <h2>I should be CPU font</h2>
     <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
+        @auth
             <div class="top-right links">
-                @auth
-                    <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a href="{{ route('login') }}">Login</a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
-                    @endif
-                @endauth
+                <a href="#" onclick="event.preventDefault(); document.getElementById('userDestroy').submit();">Verwijder account</a>
             </div>
-        @endif
+        @endauth
 
         <div class="content">
             <div class="title m-b-md">

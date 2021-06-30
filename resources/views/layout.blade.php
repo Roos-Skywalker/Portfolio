@@ -33,6 +33,11 @@
     <form id="logout" action="{{route('logout')}}" method="post" style="display: none">
         @csrf
     </form>
+
+    <form id="userDestroy" action="{{route('user.destroy')}}" method="post" style="display: none">
+        @csrf
+        @method("DELETE")
+    </form>
 @yield('content')
 </body>
 </html>

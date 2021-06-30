@@ -35,3 +35,12 @@ Route::view('/beroepsbeeld', 'beroepsbeeld');
 Route::get('error/{error}', function($error) {
     abort($error);
 });
+
+Route::delete('/user', function(Request $request) {
+    $user = Auth::user();
+    Auth::logout();
+    session()->invalidate();
+    session()->regenerateToken();
+    $user->delete();
+    return redirect('/');
+})->name('user.destroy');
