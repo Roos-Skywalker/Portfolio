@@ -40,7 +40,7 @@
                         </td>
                     </tr>
                 </table>
-                <button type="submit">Opslaan</button>
+                <button type="submit">Maak account</button>
             </form>
                 <a href="{{route('assignments.index')}}">
                     <button>Annuleren</button>

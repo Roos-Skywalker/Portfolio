@@ -26,7 +26,7 @@
                         </td>
                     </tr>
                 </table>
-                <button type="submit">Opslaan</button>
+                <button type="submit">Inloggen</button>
             </form>
                 <a href="{{route('assignments.index')}}">
                     <button>Annuleren</button>
